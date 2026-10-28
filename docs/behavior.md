@@ -21,6 +21,10 @@ every app renders it — a lot of what's below is about that gap.
 - `<footer>` loses its small style inside table cells and quotes.
 - `RM.reference` / `<a href="#id">` pointing at a `<tg-reference>` opens a
   **popup**, not a scroll. Use `<a name>` anchors to scroll.
+- **File paths become command links.** Entity detection treats `/data` or
+  `/mnt/photos` as bot commands (also inside table cells), so they turn
+  into blue command links. Pass
+  `skip_entity_detection: true` when the message shows paths.
 
 ## Tables
 
@@ -38,6 +42,10 @@ every app renders it — a lot of what's below is about that gap.
   phone behavior.
 - Long cell text wraps inside its own column.
 - Inline `<tg-math>` (including `\Huge`) works inside cells.
+- **An emoji alone in a cell renders jumbo-sized** (like an emoji-only
+  chat message), so that row becomes several times taller than the others.
+  Put text next to it (`✅ ok` instead of `✅`) to keep normal row height.
+  Seen on Android; desktop not checked.
 
 ## Buttons
 
