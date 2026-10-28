@@ -1,0 +1,19 @@
+# telegram-rich-messages
+
+> Guide and Python library for Telegram Bot API Rich Messages (Bot API 10.1-10.3): structured bot messages with headings, tables, LaTeX, media, maps, collages, slideshows, collapsible sections, footnotes and in-message buttons, plus ephemeral (per-user) messages. Includes client behavior verified by live testing.
+
+## Start here
+
+- [AGENTS.md](AGENTS.md): step-by-step plan for implementing rich messages in an existing bot, any language
+
+## Docs
+
+- [docs/html-reference.md](docs/html-reference.md): every supported tag and attribute, limits, Rich Markdown syntax
+- [docs/api.md](docs/api.md): sendRichMessage, sendRichMessageDraft, editMessageText, media uploads, ephemeral messages, callback queries, error codes
+- [docs/behavior.md](docs/behavior.md): what phone and desktop apps actually render; tables, buttons, media sizes, LaTeX quirks, rate limits
+
+## Code
+
+- [rich_messages.py](rich_messages.py): single-file Python implementation (httpx)
+- [examples/send_basic.py](examples/send_basic.py): one message using most features
+- [examples/ephemeral_panel.py](examples/ephemeral_panel.py): public button opening a private ephemeral panel with buttons
